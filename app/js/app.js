@@ -17,4 +17,8 @@ app.controller('testingAngularController', function($rootScope, $scope){
       }
     );
   }
+
+  $scope.removeDestination = function(index){
+    $scope.destinations.splice(index, 1);
+  }
 });

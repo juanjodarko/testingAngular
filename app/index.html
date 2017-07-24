@@ -21,7 +21,10 @@
     <section>
       <h2>Your trip</h2>
       <div class="" ng-repeat="destination in destinations">
-        <span>{{destination.city}}, {{destination.country}}</span><button ng-click="removeDestination()">Remove</button>
+        <span>{{destination.city}}, {{destination.country}}</span>
+        <span ng-if="destination.weather"> - {{destination.weather.main}}, {{destination.weather.temp}}</span>
+        <button ng-click="removeDestination()">Remove</button>
+        <button ng-click="getWeather(destination)">Update Weather</button>
       </div>
     </section>
   </body>
